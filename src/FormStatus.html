@@ -10,8 +10,14 @@
 
 </head>
 <body ng-app = "">
-<form name="myForm" ng-init = "">
-
+<form name="myForm" ng-init = "myText = 'sunilpandey@outlook.in'">
+    Email :
+    <input type="email" name="myAddress" ng-model = "myText" required>
+    <p> Edit email address and try to change status</p>
+    <h1> Status :-</h1>
+    <p> Valid : {{ myForm.myAddress.$valid}} (if true, value meets all criteria)</p>
+    <p> Dirty : {{ myForm.myAddress.$dirty}} (if true, value has been changed)</p>
+    <p> Touched : {{ myForm.myAddress.$touched}} (if true, the field has been in focus)</p>
 
 </form>
 
