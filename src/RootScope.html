@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Root Scope</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="resources/js/angularjstutorial-deps.js"></script>
+    <script src="rootscope.js"></script>
+
+</head>
+<body ng-app = 'myApp'>
+<h3> How to Use the Scope? </h3> <br>
+When you make a controller in AngularJS, you pass the $scope object as an argument.
+When adding properties to the $scope object in the controller, the view (HTML) gets access to these properties.
+In the view, you do not use the prefix $scope, you just refer to a propertyname, like {{carname}}.
+<br>
+<h3> Root Scope</h3>
+All applications have a $rootScope which is the scope created on the HTML element that contains the ng-app directive.
+The rootScope is available in the entire application.
+If a variable has the same name in both the current scope and in the rootScope, the application use the one in the current scope.
+<br>
+------------------------------------------------------------------------------------------------------------------------
+
+
+<br>Angular Example:-  <br> <br>
+<p> Color of Root scope is: </p> <h2> {{color}}</h2>
+
+<div ng-controller = 'myCtrl'>
+
+    <p> Color of Controller myCtrl is : </p> <h2> {{color}}</h2>
+
+</div>
+
+<p> Color of root scope is still : </p> <h2>{{color}}</h2>
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+<h3> Run Function</h3>
+<br>
+Run blocks are the closest thing in Angular to the main method.
+A run block is the code which needs to run to kickstart the application.
+It is executed after all of the service have been configured and the injector has been created.
+Run blocks typically contain code which is hard to unit-test, and for this reason should be declared in isolated modules,
+so that they can be ignored in the unit-tests.
+
+</body>
+</html>

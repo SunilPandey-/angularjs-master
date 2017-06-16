@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OrderBy Filter</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="resources/js/angularjstutorial-deps.js"></script>
+    <script src="filterorderby.js"></script>
+</head>
+<body ng-app = 'myApp' ng-controller = 'myCtrl'>
+<p>
+    Order By Filter only Works with an Array or array-like object (e.g. NodeList, jQuery object, TypedArray, String, etc)
+    <br>
+    You can change the sorting order by setting reverse to true. By default, items are sorted in ascending order.
+    The comparison is done using the comparator function. If none is specified, a default, built-in comparator is used
+    ( in a nutshell, it compares numbers numerically and strings alphabetically).
+    <br> orderBy: 'name':true <br>
+
+</p>
+_____________________________________________________________________________________________________________
+<br>
+<p> Below is Array of objects using order by filter in descending order; (for ascending order remove ': true' from code) : - </p> <br>
+<ul>
+    <li ng-repeat = "x in names | orderBy : 'country' : true">
+        {{x.name + ', ' + x.country}}
+
+    </li>
+
+
+</ul>
+
+
+</body>
+</html>

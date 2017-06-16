@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Input</title>
+    <script src="resources/js/angularjstutorial-deps.js"></script>
+    <script src="inputfilter.js"></script>
+
+</head>
+<body ng-app = 'myApp' ng-controller = 'myCtrl'>
+
+<p> Type Letter in Input field to filter names :</p>
+<input type="text" ng-model = "test">
+<ul>
+    <li ng-repeat = "x in names | filter:test"> {{x}}</li>
+</ul>
+
+
+
+
+</body>
+</html>
